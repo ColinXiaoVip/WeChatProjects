@@ -1,0 +1,11 @@
+<!--pages/outbreak/outbreak.wxml-->
+<text>请输入查询哪天的数据</text>
+<input bindchange="riqi" placeholder="2020-02-12"></input>
+<view>现存疑似人数：{{xcys}}</view>
+<view>新增疑似人数：{{xzys}}</view>
+<view style="text-align:center">疫情新闻</view>
+<view wx:for="{{shuju}}">
+ <view style="border-bottom:solid 1rpx #999999;background-color:pink">{{item.title}}</view> 
+ <view style="border-bottom:solid 2rpx #999999">{{item.summary}}</view>
+
+</view>

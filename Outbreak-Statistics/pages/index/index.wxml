@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="outbreak-title">
+  <text>日期:</text>
+  <input bindchange="getInputValue" placeholder="{{time}}"></input>
+  <view class="outbreak-button" bindtap="gain">查询</view>
+</view>
+
+<view class="outbreak-case">
+  <view class="outbreak-case-one">
+    <view>
+      现存疑似人数：
+    </view>
+    <view>
+      <text>{{suspectedCount}}</text>人
+    </view>
+  </view>
+  <view class="outbreak-case-tow">
+    <view>
+      新增疑似人数：
+    </view>
+    <view>
+      <text>{{suspectedIncr}}</text>人
+    </view>
+  </view>
+</view>
+
+<view class="outbreak-content">
+  <view class="outbreak-content-title">疫情新闻</view>
+  <view class="outbreak-content-news" wx:for="{{newsData}}" wx:key="index">
+    <view class="outbreak-news-title">{{item.title}}</view>
+    <view class="outbreak-news-summary">{{item.summary}}</view>
+  </view>
+</view>
